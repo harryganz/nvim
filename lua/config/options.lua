@@ -32,11 +32,8 @@ vim.keymap.set('n', 'gK', function()
     { desc = 'Toggle diagnostic virtual_text' }
 )
 
--- Rename variable in buffer --
-vim.keymap.set("n", "<A-r>", vim.lsp.buf.rename, { desc = "Rename symbol", noremap = true })
-
 -- Open terminal below window
-vim.keymap.set("n", "<C-t>", ":bo term <CR>", { desc = "Open terminal", noremap = true })
+vim.keymap.set("n", "<A-t>", ":bo term <CR>", { desc = "Open terminal", noremap = true })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>:q<CR>", { desc = "Close terminal" })
 
 -- Navigate between windows in terminal and normal mode using Alt-{direction}
