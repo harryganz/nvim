@@ -11,12 +11,16 @@ vim.opt.scrolloff = 999 -- Keep cursor in center of screen when scrolling (if po
 
 vim.opt.termguicolors = true -- Use terminal GUI colors 
 
+-- Share clipboard with system
+vim.opt.clipboard = "unnamedplus"
+
 vim.g.mapleader = " " -- Use space character as "leader"
 vim.g.maplocalleader = " "
 
 -- Disable netrw (no idea what this is, but it must be disabled for nvim-tree)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+
 
 -- Toggle virtual text for diagnostics
 vim.keymap.set('n', 'gK', function()
@@ -29,10 +33,7 @@ vim.keymap.set('n', 'gK', function()
 )
 
 -- Rename variable in buffer --
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename symbol" })
-
--- Share clipboard with system
-vim.opt.clipboard = unnamedplus
+vim.keymap.set("n", "<A-r>", vim.lsp.buf.rename, { desc = "Rename symbol", noremap = true })
 
 -- Open terminal below window
 vim.keymap.set("n", "<C-t>", ":bo term <CR>", { desc = "Open terminal", noremap = true })
