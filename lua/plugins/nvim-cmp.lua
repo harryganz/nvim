@@ -8,9 +8,9 @@ return {
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
     },
-    opts =  function(_, opts)
+    config =  function(_, opts)
         cmp = require("cmp")
-        opts = {
+        cmp.setup({
             -- Basic snippet engine
             expand = function(args)
                 snippet = require("luasnip").lsp_expand(args.body)
@@ -31,7 +31,7 @@ return {
             }, {
               { name = 'buffer' },
             }),
-        }
+        })
 
         -- Autocomplete for '/' and '?'
         cmp.setup.cmdline({ "/", "?" }, {
