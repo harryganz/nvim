@@ -31,6 +31,10 @@ vim.keymap.set("n", "<leader>fg", ts.live_grep, { desc = "Search within files" }
 vim.keymap.set("n", "<leader>fb", ts.buffers, { desc = "Search within buffers" })
 vim.keymap.set("n", "<leader>fh", ts.help_tags, { desc = "Search for help tags" })
 
+-- Toggle Terminal
+
+vim.keymap.set("n", "<C-t>", "<Cmd>ToggleTerm<CR>", { desc = "Open Terminal" })
+
 -- View Diagnostics/Symbols/Usages/QuickFixes
 local trouble = require("trouble")
 

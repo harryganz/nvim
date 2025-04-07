@@ -55,6 +55,7 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 * folke/tokyonight.nvim - Color scheme
 * nvim-treesitter/nvim-treesitter - Syntax parsing/highlighting
 * folke/trouble.nvim - Diagnostics/LSP dialog UI
+* akinsho/toggleterm.nvim - Open terminal windows 
 
 ## Custom Keymaps 
 
@@ -65,6 +66,7 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 | Normal | \<leader\>k | Display Information About Symbol |
 | Normal | \<leader\>w | Open Window Navigation |
 | Normal | \<leader\>t | Toggle File Explorer |
+| Normal | \<C-t\> | Open Terminal |
 | Normal | \<F5\> | Debug Continue |
 | Normal | \<F10\> | Debug Step Over |
 | Normal | \<F11\> | Debug Step Into |
