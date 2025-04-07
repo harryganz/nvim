@@ -27,6 +27,7 @@ The plugin spec and plugin specific keymaps are in lua/plugins/\*.lua.
 * Git  ~ 2.48.1
 * Go ~ 1.24.0
 * Required language servers (see below)
+* Requried debuggers (see below)
 * (optional) [Nerdfont](https://www.nerdfonts.com/) 
 
 ## Language Server Support
@@ -35,6 +36,14 @@ This configuration does not use Mason to install language servers, and they must
 as binaries on the PATH. Currently used language servers are:
 
 * gopls - Go language server
+
+## Debugger Support
+
+This configuration uses DAP (Debugger Adapater Protocol) to interact with debuggers. The debuggers
+are not automatically installed and must be installed using a package manager or similar. 
+Debuggers currently being used:
+
+* devle - Go language debugger
 
 ## Usage
 
@@ -72,7 +81,8 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 | Normal | \<F10\> | Debug Step Over |
 | Normal | \<F11\> | Debug Step Into |
 | Normal | \<leader\>b | Toggle Breakpoint |
-| Normal | \<leader\>d | Start Debugger |
+| Normal | \<leader\>ds | Start Debugger |
+| Normal | \<leader\>dt | Stop Debugger |
 | Normal | \\d | Toggle Debug UI |
 | Normal | \<leader\>ff| Find Files |
 | Normal | \<leader\>fg | Find in Files |

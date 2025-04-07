@@ -18,7 +18,8 @@ vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Debug step over" })
 vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Debug step into" })
 vim.keymap.set("n", "<F12>", dap.step_out, { desc = "Debug step out" })
 vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
-vim.keymap.set("n", "<leader>d", dap.continue, { desc = "Start debugger" })
+vim.keymap.set("n", "<leader>ds", dap.continue, { desc = "Start debugger" })
+vim.keymap.set("n", "<leader>dt", dap.terminate, { desc = "Terminate debugger" })
 
 -- Toggle debug UI
 local dapui = require("dapui")
