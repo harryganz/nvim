@@ -11,16 +11,5 @@ return {
         highlight = {
             enable = true,
         },
-
-        -- Enable incremental selection based on scope(s)
-        incremental_selection = {
-            enable = true,
-            keymaps = {
-                init_selection = "vss",
-                node_incremental = "vsl",
-                scope_incremental = "vsi",
-                node_decremental = "vsh",
-            },
-        }
     },
 }

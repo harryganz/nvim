@@ -8,7 +8,6 @@ return {
         local dap = require("dap")
         local ui = require("dapui")
         ui.setup({})
-        vim.keymap.set("n", "<leader>du", ui.toggle, { desc = "Toggle debug UI" })
 
         dap.listeners.before.attach.dapui_config = function()
           ui.open()
