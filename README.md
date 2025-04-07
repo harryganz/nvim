@@ -17,7 +17,7 @@ navigation, autocompletion, and debugging.
 The init.lua is the entrance point which loads: 
 1. lua/config/options.lua - Global options and keymaps 
 2. lua/config/lazy.lua - Entry point to load plugins using lazy.nvim
-3. lua/config/keyamps.lua - Contains all custom key mappings
+3. lua/config/keymaps.lua - Contains all custom key mappings
 
 The plugin spec and plugin specific keymaps are in lua/plugins/\*.lua.
 
