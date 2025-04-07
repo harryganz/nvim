@@ -56,6 +56,7 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 * nvim-treesitter/nvim-treesitter - Syntax parsing/highlighting
 * folke/trouble.nvim - Diagnostics/LSP dialog UI
 * akinsho/toggleterm.nvim - Open terminal windows 
+* tpop/vim-fugitive - Git integration (vimscript)
 
 ## Custom Keymaps 
 
@@ -77,6 +78,8 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 | Normal | \<leader\>fg | Find in Files |
 | Normal | \<leader\>fb | Find in Buffers |
 | Normal | \<leader\>fh | Find in Help |
+| Normal | \<leader\>bl | Open Git Blame |
+| Normal | \<leader\>mg | Open Merge Tool |
 | Normal | \<leader\>x | Toggle Diagnostics |
 | Normal | \<leader\>u | Go To Usages | 
 | Normal | \<leader\>df | Go To Definition |

@@ -35,9 +35,12 @@ vim.keymap.set("n", "<leader>fh", ts.help_tags, { desc = "Search for help tags" 
 
 vim.keymap.set("n", "<C-t>", "<Cmd>ToggleTerm<CR>", { desc = "Open Terminal" })
 
+-- Git Integration
+vim.keymap.set("n", "<leader>bl", "<Cmd>Git blame<CR>", { desc = "Toggle git Blame"})
+vim.keymap.set("n", "<leader>mg", "<Cmd>Git mergetool<CR>", { desc = "Load git Mergetool into quick fix list"})
+
 -- View Diagnostics/Symbols/Usages/QuickFixes
 local trouble = require("trouble")
-
 vim.keymap.set(
     "n", 
     "<leader>x", 
@@ -50,7 +53,6 @@ vim.keymap.set(
     end, 
     { desc = "Toggle diagnostics view"}
 )
-
 vim.keymap.set(
     "n",
     "<leader>u",
@@ -62,7 +64,6 @@ vim.keymap.set(
     end,
     { desc = "Toggle lsp references" }
 )
-
 vim.keymap.set(
     "n",
     "<leader>df",
@@ -74,7 +75,6 @@ vim.keymap.set(
     end,
     { desc = "Toggle lsp definitions" }
 )
-
 vim.keymap.set(
     "n",
     "<leader>qf",
