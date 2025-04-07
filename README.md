@@ -17,6 +17,7 @@ navigation, autocompletion, and debugging.
 The init.lua is the entrance point which loads: 
 1. lua/config/options.lua - Global options and keymaps 
 2. lua/config/lazy.lua - Entry point to load plugins using lazy.nvim
+3. lua/config/keyamps.lua - Contains all custom key mappings
 
 The plugin spec and plugin specific keymaps are in lua/plugins/\*.lua.
 
@@ -26,6 +27,7 @@ The plugin spec and plugin specific keymaps are in lua/plugins/\*.lua.
 * Git  ~ 2.48.1
 * Go ~ 1.24.0
 * Required language servers (see below)
+* (optional) [Nerdfont](https://www.nerdfonts.com/) 
 
 ## Language Server Support
 
@@ -38,4 +40,43 @@ as binaries on the PATH. Currently used language servers are:
 
 You can copy this configuraton by cloning this repo. into your config path, you can find it by opening 
 Neovim and typing `:echo stpath("config")`. When you open neovim it should automatically load all of the plugins.
+
+## Plugins 
+
+* neovim/nvim-lspconfig - Language server protocol support for Neovim 
+* L3MON4D3/LuaSnip - Snippets for Neovim 
+* windwp/nvim-autopairs - Automatic completion of brackets/braces 
+* hrsh7th/nvim-cmp - Autocomplete for Neovim
+* mfussenegger/nvim-dap - Debug adapter for Neovim 
+* rcarriga/nvim-dap-ui - Debugging UI 
+* nvim-tree/nvim-tree.lua - File explorer
+* yorickpeterse/nvim-window - Window navigation
+* nvim-telescope/telescop.nvim - File/Text finding utility
+* folke/tokyonight.nvim - Color scheme
+* nvim-treesitter/nvim-treesitter - Syntax parsing/highlighting
+* folke/trouble.nvim - Diagnostics/LSP dialog UI
+
+## Custom Keymaps 
+
+| Mode | Keys | Action            |
+| ---- | ---- | ------            |
+| Normal | \<leader\>r | Rename Symbol |
+| Normal | \<leader\>a | View Code Actions For Symbol |
+| Normal | \<leader\>k | Display Information About Symbol |
+| Normal | \<leader\>w | Open Window Navigation |
+| Normal | \<leader\>t | Toggle File Explorer |
+| Normal | \<F5\> | Debug Continue |
+| Normal | \<F10\> | Debug Step Over |
+| Normal | \<F11\> | Debug Step Into |
+| Normal | \<leader\>b | Toggle Breakpoint |
+| Normal | \<leader\>d | Start Debugger |
+| Normal | \\d | Toggle Debug UI |
+| Normal | \<leader\>ff| Find Files |
+| Normal | \<leader\>fg | Find in Files |
+| Normal | \<leader\>fb | Find in Buffers |
+| Normal | \<leader\>fh | Find in Help |
+| Normal | \<leader\>x | Toggle Diagnostics |
+| Normal | \<leader\>u | Go To Usages | 
+| Normal | \<leader\>df | Go To Definition |
+| Normal | \<leader\>qf | View Quick Fixes |
 
