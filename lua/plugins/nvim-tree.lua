@@ -1,5 +1,9 @@
 return {
     "nvim-tree/nvim-tree.lua",
-    opts = {},
+    init = function()
+        local api = require("nvim-tree.api")
+        api.tree.toggle_gitignore_filter()
+    end,
+    config = true,
 }
 
