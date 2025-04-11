@@ -13,5 +13,24 @@ return {
         lspConfig.gopls.setup({
             capabilities = capabilities,
         })
-    end
+
+        lspConfig.jdtls.setup({
+            init_options = {
+                settings = {
+                    java = {
+                        home = vim.fn.getenv("JAVA_HOME"),
+                        eclipse = {
+                            downloadSources = true,
+                        },
+                        maven = {
+                            downloadSources = true,
+                        },
+                        sources = {
+                            organizeImports = true,
+                        },
+                    }
+                },
+            },
+        })
+    end,
 }

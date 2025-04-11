@@ -36,6 +36,11 @@ This configuration does not use Mason to install language servers, and they must
 as binaries on the PATH. Currently used language servers are:
 
 * gopls - Go language server
+* jdtls - Eclipse JDT Langage Server
+    * If lombok support required, add the following to your .bashrc/.zshrc/etc. 
+    ```
+    export JDTLS_JVM_ARGS="-javaagent:<path to lombok jar>"
+    ```
 
 ## Debugger Support
 
