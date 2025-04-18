@@ -14,6 +14,10 @@ return {
             capabilities = capabilities,
         })
 
+        lspConfig.pyright.setup({
+            capabilities = default_capabilities,
+        })
+
         lspConfig.jdtls.setup({
             init_options = {
                 settings = {
