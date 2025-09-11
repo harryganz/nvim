@@ -15,10 +15,11 @@ return {
         })
 
         lspConfig.pyright.setup({
-            capabilities = default_capabilities,
+            capabilities = capabilities,
         })
 
         lspConfig.jdtls.setup({
+            capabilities = capabilities,
             init_options = {
                 settings = {
                     java = {
@@ -35,6 +36,10 @@ return {
                     }
                 },
             },
+        })
+
+        lspConfig.yamlls.setup({
+            capabilities = capabilities,
         })
     end,
 }
