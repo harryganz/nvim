@@ -30,26 +30,6 @@ The plugin spec and plugin specific keymaps are in lua/plugins/\*.lua.
 * Requried debuggers (see below)
 * (optional) [Nerdfont](https://www.nerdfonts.com/) 
 
-## Language Server Support
-
-This configuration does not use Mason to install language servers, and they must be installed
-as binaries on the PATH. Currently used language servers are:
-
-* gopls - Go language server
-* jdtls - Eclipse JDT Langage Server
-    * If lombok support required, add the following to your .bashrc/.zshrc/etc. 
-    ```
-    export JDTLS_JVM_ARGS="-javaagent:<path to lombok jar>"
-    ```
-
-## Debugger Support
-
-This configuration uses DAP (Debugger Adapater Protocol) to interact with debuggers. The debuggers
-are not automatically installed and must be installed using a package manager or similar. 
-Debuggers currently being used:
-
-* delve - Go language debugger
-
 ## Usage
 
 You can copy this configuraton by cloning this repo. into your config path, you can find it by opening 
@@ -57,12 +37,10 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 
 ## Plugins 
 
-* neovim/nvim-lspconfig - Language server protocol support for Neovim 
+* mason - language server support
 * L3MON4D3/LuaSnip - Snippets for Neovim 
 * windwp/nvim-autopairs - Automatic completion of brackets/braces 
 * hrsh7th/nvim-cmp - Autocomplete for Neovim
-* mfussenegger/nvim-dap - Debug adapter for Neovim 
-* rcarriga/nvim-dap-ui - Debugging UI 
 * nvim-tree/nvim-tree.lua - File explorer
 * yorickpeterse/nvim-window - Window navigation
 * nvim-telescope/telescop.nvim - File/Text finding utility
@@ -82,13 +60,6 @@ Neovim and typing `:echo stpath("config")`. When you open neovim it should autom
 | Normal | \<leader\>w | Open Window Navigation |
 | Normal | \<leader\>t | Toggle File Explorer |
 | Normal | \<C-t\> | Open Terminal |
-| Normal | \<F5\> | Debug Continue |
-| Normal | \<F10\> | Debug Step Over |
-| Normal | \<F11\> | Debug Step Into |
-| Normal | \<leader\>b | Toggle Breakpoint |
-| Normal | \<leader\>ds | Start Debugger |
-| Normal | \<leader\>dt | Stop Debugger |
-| Normal | \\d | Toggle Debug UI |
 | Normal | \<leader\>ff| Find Files |
 | Normal | \<leader\>fg | Find in Files |
 | Normal | \<leader\>fb | Find in Buffers |
