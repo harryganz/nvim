@@ -11,20 +11,6 @@ vim.keymap.set("n", "<leader>w", window.pick, { desc = "Navigate betwewn windows
 local nt = require("nvim-tree.api")
 vim.keymap.set("n", "<leader>t", nt.tree.toggle, {desc = "Toggle Navigation"})
 
--- Debug operations
-local dap = require("dap")
-vim.keymap.set("n", "<F5>", dap.continue, { desc = "Debug continue" })
-vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Debug step over" })
-vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Debug step into" })
-vim.keymap.set("n", "<F12>", dap.step_out, { desc = "Debug step out" })
-vim.keymap.set("n", "<leader>b", dap.toggle_breakpoint, { desc = "Toggle breakpoint" })
-vim.keymap.set("n", "<leader>ds", dap.continue, { desc = "Start debugger" })
-vim.keymap.set("n", "<leader>dt", dap.terminate, { desc = "Terminate debugger" })
-
--- Toggle debug UI
-local dapui = require("dapui")
-vim.keymap.set("n", "\\d", dapui.toggle, { desc = "Toggle debug UI" })
-
 -- Find files using telescope
 local ts = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", ts.find_files, { desc = "Find files" })
@@ -33,7 +19,6 @@ vim.keymap.set("n", "<leader>fb", ts.buffers, { desc = "Search within buffers" }
 vim.keymap.set("n", "<leader>fh", ts.help_tags, { desc = "Search for help tags" })
 
 -- Toggle Terminal
-
 vim.keymap.set("n", "<C-t>", "<Cmd>ToggleTerm<CR>", { desc = "Open Terminal" })
 
 -- Git Integration
