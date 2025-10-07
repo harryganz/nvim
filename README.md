@@ -48,7 +48,7 @@ This configuration uses DAP (Debugger Adapater Protocol) to interact with debugg
 are not automatically installed and must be installed using a package manager or similar. 
 Debuggers currently being used:
 
-* devle - Go language debugger
+* delve - Go language debugger
 
 ## Usage
 
