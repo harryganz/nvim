@@ -1,10 +1,9 @@
-vim.lsp.config('yaml-language-server', {
+return {
     cmd = { 'yaml-language-server', '--stdio' },
     root_markers = { ".git" },
     file_types = { "yaml", "yml" },
     settings = {
         yaml = {
-            validate = true,
             schemaStore = {
                 enable = true,
             },
@@ -12,4 +11,4 @@ vim.lsp.config('yaml-language-server', {
             completion = true,
         }
     },
-})
+}
