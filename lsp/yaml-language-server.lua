@@ -1,7 +1,7 @@
 return {
     cmd = { 'yaml-language-server', '--stdio' },
     root_markers = { ".git" },
-    file_types = { "yaml", "yml" },
+    filetypes = { "yaml", "yml" },
     settings = {
         yaml = {
             schemaStore = {
