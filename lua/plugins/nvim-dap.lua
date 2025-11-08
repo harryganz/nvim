@@ -22,6 +22,14 @@ return {
             end
         end
 
+        dap.adapters.gdb = function(callback, config)
+            callback({
+                type = 'executable',
+                command = 'gdb',
+                args = { '-i', 'dap' },
+            })
+        end
+
 
         -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
         dap.configurations.go = {
@@ -46,5 +54,28 @@ return {
             mode = "test",
             program = "./${relativeFileDirname}"
           } 
-}    end,
+      }    
+
+      dap.configurations.c = {
+          {
+            name = 'Launch',
+            type = 'gdb',
+            request = 'launch',
+            program = function()
+              return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+            end,
+            cwd = '${workspaceFolder}',
+            stopAtBeginningOfMainSubprogram = false,
+          },
+          {
+            name = "Attach to process",
+            type = 'gdb',
+            request = 'attach',
+            pid = require('dap.utils').pick_process,
+            args = {},
+          }
+      }
+
+       dap.configurations.cpp = dap.configurations.c
+  end,
 }
